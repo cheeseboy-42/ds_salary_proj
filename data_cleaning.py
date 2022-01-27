@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jan  7 17:22:31 2022
-
-@author: jamie
-"""
-
 import pandas as pd
 
 df = pd.read_csv('glassdoor_jobs.csv')
@@ -38,7 +31,7 @@ df['same_state'] = df.apply(lambda x: 1 if x['Location'] == x['Headquarters'] el
 df['age'] = df.Founded.apply(lambda x: x if x < 0 else 2020-x)
 
 
-# parsing of job desc
+# parsing of job desc - skills
 df['Job Description'][0]
 ## python
 df['python_yn'] = df['Job Description'].apply(lambda x: 1 if 'python' in x.lower() else 0)
@@ -56,8 +49,19 @@ df['aws_yn'].value_counts()
 df['excel_yn'] = df['Job Description'].apply(lambda x: 1 if 'excel' in x.lower() else 0)
 df['excel_yn'].value_counts()
 
+# parsing of job desc - education
+## phd
+df['phd_yn'] =  df['Job Description'].apply(lambda x: 1 if 'phd' in x.lower() or 'ph.d' in x.lower() else 0)
+df['phd_yn'].value_counts()
+## masters
+df['masters_yn'] =  df['Job Description'].apply(lambda x: 1 if 'masters' in x.lower() or "master's" in x.lower() or "ms" in x.lower() else 0)
+df['masters_yn'].value_counts()
+## bachelors
+df['bachelors_yn'] =  df['Job Description'].apply(lambda x: 1 if "bachelor" in x.lower() or "bs" in x.lower() else 0)
+df['bachelors_yn'].value_counts()
 
-# drop first column
+
+# drop (empty) first column
 df_out = df.drop(['Unnamed: 0'], axis =1)
 
 
@@ -65,5 +69,3 @@ import os
 os.getcwd()
 
 df_out.to_csv(os.getcwd() + '\\salary_data_cleaned.csv' , index = False)
-
-# pd.read_csv('salary_data_cleaned.csv')
