@@ -7,7 +7,7 @@
 ## Code and Resources Used 
 **Python Version:** 3.7  
 **Packages:** pandas, numpy, sklearn, matplotlib, seaborn  
-**Ken Jee's Project:** This project is based off of Ken Jee's project, with my own various modifications to feature engineering and model building. Here is the link to his github repo: https://github.com/PlayingNumbers/ds_salary_proj
+**Ken Jee's Project:** This project is based off of Ken Jee's project, with my own various modifications to feature engineering and model building. Here is the link to his github repo: https://github.com/PlayingNumbers/ds_salary_proj  
 **Dataset**: The original dataset glassdoor_jobs.csv was scraped by Ken Jee. Glassdoor scraper code can be found in his github repo listed in previous bullet point
 
 
