@@ -1,6 +1,6 @@
 # Data Science Salary Estimator: Project Overview 
 * Created a model that estimates data science salaries (MAE ~ $12.0K) to help data scientists negotiate their income when they get a job
-* Engineered features from the text of each job description to quantify the value companies put on various skills (python, R, SQL, tableau, spark, aws and excel) and education requirements (bachelor's, master's or PhD)
+* Cleaned over 1000 rows of data, and engineered features from the text of each job description to quantify the value companies put on various skills (python, R, SQL, tableau, spark, aws and excel) and education requirements (bachelor's, master's or PhD)
 * Optimized Linear, Lasso, Elastic Net, Kernel Ridge, SVR, Gradient Boosting, XGB and Random Forest Regressors using GridsearchCV to reach the best model (MAE ~ $10.2K)
 * Created a hybrid model using 4 different models to make the final predictive model (MAE ~ $12.0K) more robust to overfitting than any single baseline model
 
@@ -8,7 +8,7 @@
 **Python Version:** 3.7  
 **Packages:** pandas, numpy, sklearn, matplotlib, seaborn  
 **Ken Jee's Project:** This project is based off of Ken Jee's project, with my own various modifications to feature engineering and model building. Here is the link to his github repo: https://github.com/PlayingNumbers/ds_salary_proj  
-**Dataset**: The original dataset glassdoor_jobs.csv was scraped by Ken Jee. Glassdoor scraper code can be found in his github repo listed in previous bullet point
+**Dataset**: The original dataset glassdoor_jobs.csv was scraped by Ken Jee. Glassdoor scraper code can be found in his github repo listed in previous bullet point  
 
 
 ## Data Cleaning
@@ -77,7 +77,7 @@ I then used a mixture of the eight different models to arrive at a robust model 
 
 **Hybrid Models**: The second hybrid model performed the best
 * **Mixture of linear, lasso, elastic net, kernel ridge, gradient boosting, extreme gradient boosting, random forest**: MAE = 13.07
-* **Mixture of linear, lasso, elastic net, extreme gradient boosting, random forest**: MAE = 12.03
+* **Mixture of linear, elastic net, extreme gradient boosting, random forest**: MAE = 12.03
 
 
 
