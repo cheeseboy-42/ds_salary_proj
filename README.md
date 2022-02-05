@@ -1,5 +1,5 @@
 # Data Science Salary Estimator: Project Overview 
-* Created a model that estimates data science salaries (MAE ~ $12.0K) to help data scientists negotiate their income when they get a job
+* Created a model that estimates data science salaries (MAE ~ $12.0K)
 * Cleaned over 1000 rows of data, and engineered features from the text of each job description to quantify the value companies put on various skills (python, R, SQL, tableau, spark, aws and excel) and education requirements (bachelor's, master's or PhD)
 * Optimized Linear, Lasso, Elastic Net, Kernel Ridge, SVR, Gradient Boosting, XGB and Random Forest Regressors using GridsearchCV to reach the best model (MAE ~ $10.2K)
 * Created a hybrid model using 4 different models to make the final predictive model (MAE ~ $12.0K) more robust to overfitting than any single baseline model
